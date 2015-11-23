@@ -20,26 +20,55 @@ using namespace std;
 enum beverages {
     coffee = 1,
     coffee_with_cream ,
-    coffee_with_cream_and_sugar
+    coffee_with_cream_and_sugar,
+    tea,
+    tea_w_cream,
+    tea_w_cream_and_sugar,
+    hot_chocolate,
+    hot_chocolate_with_cream,
+    hot_chocolate_w_cream_and_sugar
 };
+
+void drink(int delicious){
+    switch(delicious) {
+        case 1:
+            cout << coffee << " Coffee";
+            break;
+        case 2:
+            cout << beverages::coffee_with_cream << " Coffee w/cream";
+            break;
+        case 3:
+            cout << beverages::coffee_with_cream_and_sugar << " Coffee w/cream & sugar";
+            break;
+        case 4:
+            cout << beverages::tea << " Tea";
+            break;
+        case 5:
+            cout << beverages::tea_w_cream << " Tea w crean";
+            break;
+        case 6:
+            cout << beverages::tea_w_cream_and_sugar << " Tea w cream & sugar";
+            break;
+        case 7:
+            cout << hot_chocolate << " Hot Chocolate";
+            break;
+        case 8:
+            cout << hot_chocolate_with_cream << " Hot Chocolate w cream";
+            break;
+        case 9:
+            cout << hot_chocolate_w_cream_and_sugar << " hot chocolate w cream and sugar";
+            break;
+    }
+}
 
 int main() {
 int input;
-    cout << "Select Drink" << endl;
-    cin >> input;
-
-    switch(input) {
-        case 1:
-            cout << beverages::coffee;
-            break;
-        case 2:
-            cout << beverages::coffee_with_cream;
-            break;
-        case 3:
-            cout << beverages::coffee_with_cream_and_sugar;
-            break;
-    }
-
-
+    do {
+        cout << "Select Drink 1 - 9 or 0 to exit" << endl;
+        cin >> input;
+        drink(input);
+        cout << endl;
+    } while (input != 0);
     return 0;
+
 }
