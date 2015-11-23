@@ -13,12 +13,16 @@ int main() {
     int arrayOfInts[100];
     for ( int i = 0; i < 100; i++ ){
         arrayOfInts[i] = i;
+        cout << arrayOfInts[i] << " ";
     }
 
-    char int cArray[100];
+    cout << endl;
+
+    char cArray[100];
     char X;
     for ( int i = 0; i < 100; i++ ){
-        cArray[i] = X;
+        cArray[i] = 'X';
+        cout << cArray[i] << " ";
     }
 
     return 0;
