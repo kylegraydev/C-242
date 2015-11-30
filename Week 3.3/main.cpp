@@ -5,16 +5,38 @@ Repeat the exercise above but perform all operations on the arrays using pointer
  when ending the program using the C++ operator delete.
 
 HINT – remember the difference between delete p and delete [] p. */
-
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-int main() {
 
-    int * pintArray = new int[100];
+class Stuff {
+    int m_i;
+//    char m_c;
+public:
+    void set_int (int i) {
+        int m_i = i;
+    }
+//    int get_int() {
+//        return m_i;
+//    }
+};
 
-    for ( )
-    //populate array
-    return 0;
-}
+        int main()
+        {
+
+
+
+//            Stuff *p_stuff = new Stuff[100];
+//            Stuff();
+            arrayOfStuff Stuff[100];
+
+            for(int i = 0; i < 10; i++) {
+
+                Stuff.set_int(i);
+//                cout <<  Stuff[i].get_int();
+
+            }
+
+
+            return 0;
+        }
